@@ -1,16 +1,28 @@
 import React from 'react';
-import { StyleSheet, View, Image, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Noticias from './Noticias';
+import Frequencia from './Frequencia';
+import Turma from './Turma';
+import Refeitorio from './Refeitorio';
+import Notas from './Notas';
 
-export  default function Login( { navigation } ){
+
+const Tab = createBottomTabNavigator();
+
+export default function Home(){
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Página Principal</Text>
-        </View>
-      );
+        <Tab.Navigator>
+            <Tab.Screen name="Noticas" component={Noticias} />
+            <Tab.Screen name="Frequencia" component={Frequencia} />   
+            <Tab.Screen name="Turma" component={Turma} />
+            <Tab.Screen name="Refeitorio" component={Refeitorio} />
+            <Tab.Screen name="Notas" component={Notas} />
+        </Tab.Navigator>
+    );
 }
 
 const styles = StyleSheet.create({
-    
     image: {
         width: 200,
         height: 200,

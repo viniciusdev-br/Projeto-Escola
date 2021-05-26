@@ -20,11 +20,12 @@ export  default function Login( { navigation } ){
                 />
 
             <Text style={{color: 'white', fontSize:18}}>Senha:</Text>
-                <TextInput secureTextEntry={true} style={styles.textInput} placeholder="Digite sua senha aqui:"/>
+            <TextInput secureTextEntry={true} style={styles.textInput} placeholder="Digite sua senha aqui:"/>
 
             <TouchableOpacity style={styles.customTouchable} onPress={ () => navigation.navigate('Home') }>
                 <Text style={{fontSize:20, textAlign:'center', color:'white', padding: 7}} >Login!</Text>
             </TouchableOpacity>
+            
         </View>
     );
 }
