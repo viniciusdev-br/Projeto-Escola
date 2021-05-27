@@ -23,11 +23,17 @@ export const Name = styled.Text`
 `;
 
 export const PostImage = styled.Image`
-    width: 100%;
+    width: 80%;
     aspect-ratio: ${props => props.ratio};
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    border-radius: 10px;
 `;
 
 export const Description = styled.Text`
-    padding: 15px;
+    padding: 25px;
     line-height: 18px;
+    font-size: 16px;
+    text-align: justify;
 `;

@@ -37,14 +37,14 @@ export default function Noticias(){
                 renderItem={({item}) => (
                     <Post>
                         <Header>
-                            <Avatar source={{uri: item.author.avatar}}/>
-                            <Name>{item.author.name}</Name>
+                            <Avatar source={require('../../assets/book-50.png')}/>
+                            <Name>Escola Terezinha Souza:</Name>
                         </Header>
 
                         <PostImage ratio={item.aspectRatio} source={{ uri: item.image}}/>
 
                         <Description>
-                            <Name>{item.author.name}</Name> {item.description}
+                            {item.description}
                         </Description>
 
                     </Post>
