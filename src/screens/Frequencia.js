@@ -7,20 +7,24 @@ import { PieChart } from 'react-native-svg-charts';
   Caso haja uma falta, será possível ver data, e horário da falta do aluno
 */
 
+/*function corSlice() {
+  return(1);
+}*/
+
 export default function Frequencia(){
   const data = [89,11];
   const pieData = data.map((value, index) => ({
     value,
     key: `${index}-${value}`,
     svg:{
-      fill: '#2e2fbf'
+      fill: '#2E2FBF'
     }
   }));
   return(
     <View style={styles.container}>
       <PieChart 
         style={styles.chart} 
-        data={pieData}        
+        data={pieData}     
       />
       <View style={styles.chartPresent}>
         <Text style={{color:'#FFFFFF'}}>89% de presença.</Text>
@@ -42,11 +46,17 @@ export default function Frequencia(){
 
       <View style={styles.tabelaFaltas}>
         <Text style={styles.faltas}>11/04/2012</Text>
+        <View style={{height:1, backgroundColor:"#FFFFFF", width:200}}></View>
         <Text style={styles.faltas}>11/04/2012</Text>
+        <View style={{height:1, backgroundColor:"#FFFFFF", width:200}}></View>
         <Text style={styles.faltas}>11/04/2012</Text>
+        <View style={{height:1, backgroundColor:"#FFFFFF", width:200}}></View>
         <Text style={styles.faltas}>11/04/2012</Text>
+        <View style={{height:1, backgroundColor:"#FFFFFF", width:200}}></View>
         <Text style={styles.faltas}>11/04/2012</Text>
+        <View style={{height:1, backgroundColor:"#FFFFFF", width:200}}></View>
         <Text style={styles.faltas}>11/04/2012</Text>
+        <View style={{height:1, backgroundColor:"#FFFFFF", width:200}}></View>
       </View>
     </View>
   );
@@ -68,11 +78,10 @@ const styles = StyleSheet.create({
       backgroundColor: '#85B2DD',
       justifyContent: 'center',
       alignItems: 'center',
+      alignSelf: 'center',
       width: '60%',
       borderRadius: 7,
       paddingVertical: 5,
-      alignSelftem: 'center',
-      alignSelf: 'center',
       marginBottom: 30,
     },
     tabelaFaltas: {
